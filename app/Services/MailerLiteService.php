@@ -132,9 +132,10 @@ class MailerLiteService
     {
         Log::info("Generating possible start dates.");
         $dates = [];
-        $now = Carbon::now();
+        $now = Carbon::now()->addMonths(2); // Start from now + 2 months
 
-        for ($i = 1; $i <= 4; $i++) {
+
+        for ($i = 1; $i <= 6; $i++) {
             $dates[] = $now->copy()->addMonths($i)->format('M-Y');
         }
 
