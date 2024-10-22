@@ -19,7 +19,13 @@ return [
 
     'allowed_methods' => ['*'],  // You can restrict methods like 'POST', 'GET' or use '*' for all
 
-    'allowed_origins' => ['https://www.australianmindfulness.institute'],['https://www.canadianmindfulnessinstitute.com'],['https://www.britishmindfulnessinstitute.co.uk'],['https://www.irishmindfulnessinstitute.ie'],  // Allow specific domain
+    // Combine all allowed origins into a single array
+    'allowed_origins' => [
+        'https://www.australianmindfulness.institute', 
+        'https://www.canadianmindfulnessinstitute.com', 
+        'https://www.britishmindfulnessinstitute.co.uk', 
+        'https://www.irishmindfulnessinstitute.ie'
+    ], 
 
     'allowed_origins_patterns' => [],
 
